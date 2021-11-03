@@ -1,7 +1,6 @@
  <?php 
-    require "perguntas.inc";
+    include "perguntas.inc";
     // array com os enunciados
-    $id = $_GET["id"];
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +17,11 @@
         <?php include "menu.inc" ?>
         <div class="row">
             <h2 class="col">Pergunta <?php $numeroPergunta = $id + 1; echo "$numeroPergunta:" ?> </h2>
-            <div class="container">
-                <?php
-                    echo $carregaPergunta($id);
-                ?>
-            </div>
         </div>
+        
+        
+        <?php echo $mostraFormsResposta($id); ?>
+        
         <footer>
             <?php include "rodape.inc"?>
         </footer>
