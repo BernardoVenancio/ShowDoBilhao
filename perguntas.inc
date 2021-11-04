@@ -45,7 +45,11 @@
         $carregaEnunciado($id) ;
         return $carregaPergunta($id);
 
-    }
+    };
+
+    $getPontuacaoMaxima = function () use ($respostas){
+        return count($respostas);
+    };
 
     //talvez use
     // function letraResposta($indice){
